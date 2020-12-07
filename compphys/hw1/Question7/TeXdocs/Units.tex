@@ -1,0 +1,32 @@
+\documentclass[12pt, oneside]{article}   	
+\usepackage[margin=1in]{geometry}                		
+%set the margins
+\geometry{letterpaper}                   		
+%choose the paper
+\usepackage[parfill]{parskip}    		
+%new paragraphs separated by newline
+\usepackage{amssymb}
+%some mathematical symbols
+\usepackage{graphicx}
+%be able to draw figures
+\usepackage{bm}
+%boldface for greek symbols
+\usepackage{wrapfig}
+%this allows text to flow around figures
+\usepackage{amsmath}
+\usepackage{float}
+
+\begin{document}
+	
+\section*{Units Derivation}	
+	In setting \(\hbar=1\) and \(m=m_e\) our units for distance and time must effectively carry the units required to make this substitution happen. Our distance parameter x must then contain the inverse of \(\frac{\hbar^2}{2m}\rightarrow\frac{eV^2 s^2}{m_e} \) and likewise our time units must contain the inverse of \(\hbar\rightarrow \frac{1}{eV s}\). Together with their natural units of distance and time this requires our units
+	\begin{equation*}
+	[x]=\frac{m_e\cdot m}{eV^2s^2}, [t]=\frac{1}{eV}.
+	\end{equation*}
+	
+	Expressed in standard units this relationship is,
+		\begin{equation*}
+	[x]=\frac{s^2}{m^3kg}, [t]=\frac{s^3}{m^2kg}.
+	\end{equation*}
+	
+\end{document}

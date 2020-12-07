@@ -1,0 +1,51 @@
+\documentclass[12pt, oneside]{article}   	
+\usepackage[margin=1in]{geometry}                		
+%set the margins
+\geometry{letterpaper}                   		
+%choose the paper
+\usepackage[parfill]{parskip}    		
+%new paragraphs separated by newline
+\usepackage{amssymb}
+%some mathematical symbols
+\usepackage{graphicx}
+%be able to draw figures
+\usepackage{bm}
+%boldface for greek symbols
+\usepackage{wrapfig}
+%this allows text to flow around figures
+\usepackage{amsmath}
+\usepackage{float}
+
+\begin{document}
+	\section*{Analytic Solution}
+	
+	The given logistic map is
+	\begin{equation*}
+	x_{n+1}=r\frac{x_n}{1+x_n^2}.
+	\end{equation*}
+	Assuming there is a stable fixed point such that \(x_{n+1}=x_{n}=x_s\) and inserting this into the logistic map yields
+	\begin{equation*}
+	x_s=\pm\sqrt{r-1}.
+	\end{equation*}
+	In class it was shown for an arbitrary logistic map \(f(x)\) the condition \(|f'(x_s)|<1\) defines a region of stability. Appling this condition gives \(|\frac{r}{1+x_s^2}-\frac{2rx_s^2}{(1+x_s^2)^2}|<1\). Substituting \(x_s\) into this relation and disributing the absolute value leaves the inequality
+	\begin{equation*}
+	-1<1-\frac{2(r^2-r)}{r^2}<1\rightarrow 0>-\frac{1}{r}>-1\rightarrow r>1.
+	\end{equation*}
+\section*{Comments on B and C}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=60mm,height=60mm]{"bifurcation_b".png}
+	\label{0}
+	\caption{Bifurcation Diagram \(x_{n+1}=r\frac{x_n}{1+x_n^2}\)}
+	\end{figure}
+	As can be seen in Figure 1, the logistic map is stable in the range \(1\geq r \leq 15\). This agrees with the analytic solution attained above. There is no apparent period doubling.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=60mm,height=60mm]{"bifurcation_c".png}
+	\label{0}
+	\caption{Bifurcation Diagram \(x_{n+1}=r\frac{x_n}{1+x_n^4}\)}
+\end{figure}	
+As seen in figure 2 there period doubling which occurs at \(r=2\) and further period multiplicity which reduces at \(r=7 \) before ramping up again.
+
+\end{document}
